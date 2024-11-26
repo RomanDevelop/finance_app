@@ -1,5 +1,6 @@
 # dashboard_app
-<img width="1429" alt="Снимок экрана 2024-11-25 в 12 31 44" src="https://github.com/user-attachments/assets/b0e316b7-f59d-4799-89a7-4aef26964949">
+<img width="883" alt="Снимок экрана 2024-11-26 в 13 29 32" src="https://github.com/user-attachments/assets/b8977992-6098-4bb0-a691-322c4c163547">
+
 
 
 # finance_app
