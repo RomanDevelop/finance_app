@@ -1,108 +1,25 @@
-import 'package:dashboard_app/credit_card/credit_card.dart';
+import 'package:dashboard_app/credit_card/presentation/credit_card.dart';
+import 'package:dashboard_app/side_panel/side_panel.dart';
 import 'package:dashboard_app/ticket_card/ticket_card.dart';
 import 'package:dashboard_app/ticket_card/ticket_card_model.dart';
+import 'package:dashboard_app/top_panel/top_panel.dart';
 import 'package:dashboard_app/transaction_list/transaction_list.dart';
 import 'package:flutter/material.dart';
 
 class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFF5F7FA),
+    return const Scaffold(
+      backgroundColor: Color(0xFFF5F7FA),
       body: Row(
         children: [
-          // Боковая панель
-          Container(
-            width: 80,
-            color: Colors.white,
-            child: const Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: [
-                    SizedBox(height: 20),
-                    Text(
-                      "Pay",
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 50),
-                    Icon(Icons.home, size: 30, color: Colors.black),
-                    SizedBox(height: 20),
-                    Icon(Icons.credit_card, size: 30, color: Colors.grey),
-                    SizedBox(height: 20),
-                    Icon(Icons.notifications, size: 30, color: Colors.grey),
-                    SizedBox(height: 20),
-                    Icon(Icons.settings, size: 30, color: Colors.grey),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          // Основной контент
+          SidePanel(),
           Expanded(
             child: Column(
               children: [
-                // Верхняя строка
-                Container(
-                  color: Colors.white,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                  child: Row(
-                    children: [
-                      // Поисковая строка
-                      Expanded(
-                        child: SizedBox(
-                          height: 40,
-                          child: TextField(
-                            decoration: InputDecoration(
-                              hintText: "Search",
-                              prefixIcon: const Icon(Icons.search),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(24),
-                                borderSide: BorderSide.none,
-                              ),
-                              filled: true,
-                              fillColor: Colors.grey[200],
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 16),
-                      const Text(
-                        "EN",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      const SizedBox(width: 16),
-                      Stack(
-                        children: [
-                          const Icon(Icons.notifications_none, size: 28),
-                          Positioned(
-                            right: 0,
-                            top: 0,
-                            child: Container(
-                              width: 8,
-                              height: 8,
-                              decoration: const BoxDecoration(
-                                color: Colors.red,
-                                shape: BoxShape.circle,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(width: 16),
-                      const Icon(Icons.face),
-                    ],
-                  ),
-                ),
-                // Контент
-                const Expanded(
+                TopPanel(),
+                // content
+                Expanded(
                   child: Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Column(
@@ -131,7 +48,7 @@ class DashboardScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        // Карта и предстоящие платежи
+                        // Credit cards and payments
                         Row(
                           children: [
                             CreditCard(),

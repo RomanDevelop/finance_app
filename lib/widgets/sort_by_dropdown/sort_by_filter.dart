@@ -4,7 +4,14 @@ import 'package:flutter/material.dart';
 typedef SortByCallback = void Function(SortBy selectedSortBy);
 
 // Define sorting options
-enum SortBy { alphabetical, reverseAlphabetical, dateAsc, dateDesc }
+enum SortBy {
+  alphabetical,
+  reverseAlphabetical,
+  dateAsc,
+  dateDesc,
+  date,
+  amount
+}
 
 // Sort function that sorts the list based on the selected criterion
 List<String> sortItems(List<String> items, SortBy sortBy) {
@@ -23,6 +30,10 @@ List<String> sortItems(List<String> items, SortBy sortBy) {
       // Example: sorting by a date field in descending order
       items.sort((a, b) => b.compareTo(a)); // Reverse date order
       break;
+    case SortBy.date:
+    // TODO: Handle this case.
+    case SortBy.amount:
+    // TODO: Handle this case.
   }
   return items;
 }

@@ -6,4 +6,9 @@ class AppDelegate: FlutterAppDelegate {
   override func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
     return true
   }
+
+  override func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
+    // Включаем поддержку безопасного восстановления состояния
+    return true
+  }
 }

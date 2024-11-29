@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "396313071393",
+    "project_id": "dashboard-c3879",
+    "storage_bucket": "dashboard-c3879.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396313071393:android:b8b5f08e97f190368ff860",
+        "android_client_info": {
+          "package_name": "com.dashboard.macos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuj87TTx9IUDtIgjUkm2dGdQkB_Y_UcQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
